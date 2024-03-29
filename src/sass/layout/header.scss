@@ -38,6 +38,11 @@ header {
             @media screen and (min-width: 768px) {
                 gap:57px;
             }
+            a {
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+            }
         }
         li {
             list-style-type: none;

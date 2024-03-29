@@ -1,4 +1,24 @@
-/* Homepage */
+/* Error Page */
 
-@import "../layout/header.scss";
-@import "../layout/footer.scss";
+.error {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        color:#FF6060;
+        font-size: 96px;
+        margin-bottom: 50px;
+    }
+    p {
+        color: #FF6060;
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .link {
+        color: black;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}

@@ -1,4 +1,4 @@
-/* Page à propos */
+/* About Kasa */
 
 const AboutKasa = () => {
     return (

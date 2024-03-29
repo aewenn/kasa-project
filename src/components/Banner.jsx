@@ -1,3 +1,5 @@
+/* Homepage banner */
+
 import bannerkasa from '../assets/banner.png';
 
 const Banner = () => {
