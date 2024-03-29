@@ -1,2 +1,18 @@
 @import "./sass/app.scss";
-@import "./sass/header.scss";
+
+/* base */
+
+@import "./sass/base/reset.scss";
+
+/* layout */
+
+@import "./sass/layout/header.scss";
+@import "./sass/layout/footer.scss";
+
+/* components */
+
+/* pages */
+
+@import "./sass/pages/home.scss";
+
+/* utils */
