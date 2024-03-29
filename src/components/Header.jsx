@@ -1,8 +1,12 @@
+import kasalogo from '../assets/logo-kasa.svg';
+import Navbar from './Navbar';
+
 const Header = () => {
     return (
-        <div className="header">
-            <h1>header</h1>
-        </div>
+    <header>
+        <img src={kasalogo} alt="logo" />
+        <Navbar />
+    </header>
     );
 };
 

@@ -1,3 +1,54 @@
-.header {
-    font-family: Montserrat;
+/* Header */
+
+header {
+    display: flex;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+        margin-top:20px;
+        margin-right:20px;
+        margin-left:20px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top:45px;
+        margin-right:100px;
+        margin-left:100px;
+        margin-bottom:50px;
+    }
+    img {
+        @media screen and (max-width: 768px) {
+            width: 145px;
+            height:46px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 210px;
+            height: 68px;
+        }
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        margin-right:20px;
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            @media screen and (max-width: 768px) {
+                gap:25px;
+            }
+            @media screen and (min-width: 768px) {
+                gap:57px;
+            }
+        }
+        li {
+            list-style-type: none;
+            @media screen and (max-width: 768px) {
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            @media screen and (min-width: 768px) {
+                font-size: 24px;
+            }
+        }
+    }
 }
