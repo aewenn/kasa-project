@@ -1,0 +1,59 @@
+.Collapsis-section {
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    @media screen and (min-width:768px) {
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+    @media screen and (min-width: 1020px) {
+        margin-left:100px;
+        margin-right: 100px;
+    }
+    .Collapsis {
+    position: relative;
+    height: 30px;
+    background-color: #FF6060;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width:768px) {
+    height: 54px;
+    padding-bottom: 20px;
+    }
+    h3 {
+        color: #fff;
+        font-size: 13px;
+        @media screen and (min-width:768px) {
+        padding-left: 15px;
+        font-size: 24px;
+        }
+    }
+        .arrow {
+            position: absolute;
+            width: 25px;
+            right:10px;
+            bottom: 6px;
+            cursor: pointer;
+            @media screen and (min-width:768px) {
+                width: 32px;
+                bottom:20px;
+                right:20px;
+            }
+            &:active {
+                transform: rotate(180deg);
+            }
+        }
+        p {
+            background-color: #fff;
+            font-size: 13px;
+            width: 95%;
+        }
+    }
+}
