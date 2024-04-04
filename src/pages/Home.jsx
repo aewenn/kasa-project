@@ -1,13 +1,14 @@
 /* Page d'accueil */
 
 import Banner from "../components/Banner-home";
-import Card from "../components/Card";
+import Thumbsgallery from "../components/Thumbs-gallery";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <Card />
+      <Thumbsgallery />
+
     </div>
   );
 };
