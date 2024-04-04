@@ -1,6 +1,6 @@
 /* Page d'accueil */
 
-import Banner from "../components/Banner";
+import Banner from "../components/Banner-home";
 import Card from "../components/Card";
 
 const Home = () => {

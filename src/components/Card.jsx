@@ -1,7 +1,6 @@
 const Card = () => {
     return (
-        <section>
-            
+<section>
         </section>
     );
 };

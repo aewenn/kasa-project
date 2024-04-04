@@ -1,11 +1,11 @@
 /* Homepage banner */
 
-import bannerkasa from '../assets/banner.png';
+import bannerhome from '../assets/banner.png';
 
 const Banner = () => {
     return (
-        <div className="banner">
-            <img src={bannerkasa} alt="photographie falaise" />
+        <div className="banner" >
+            <img className="img-home" src={bannerhome} alt="photographie falaise" />
             <h1>Chez vous, partout et ailleurs</h1>
         </div>
     );

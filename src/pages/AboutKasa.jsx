@@ -1,9 +1,11 @@
 /* About Kasa */
 
+import Bannerabout from "../components/Banner-about";
+
 const AboutKasa = () => {
     return (
         <div>
-            <h2>A propos</h2>
+            <Bannerabout />
         </div>
     );
 };

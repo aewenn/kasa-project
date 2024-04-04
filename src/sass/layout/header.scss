@@ -26,8 +26,6 @@ header {
     }
     .navbar {
         display: flex;
-        align-items: center;
-        margin-right:20px;
         ul {
             display: flex;
             flex-direction: row;
@@ -41,7 +39,9 @@ header {
             a {
                 text-decoration: none;
                 color: black;
-                cursor: pointer;
+                &.link-underline{
+                    text-decoration: underline;
+                }
             }
         }
         li {

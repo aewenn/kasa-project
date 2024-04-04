@@ -5,7 +5,7 @@ const ErrorPage = () => {
         <div className="error">
             <h3>404</h3>
             <p>Oups! La page que vous demandez n'existe pas.</p>
-            <NavLink to="/home">
+            <NavLink to="/">
                 <p className="link">Retourner sur la page d'accueil</p>
             </NavLink>
         </div>

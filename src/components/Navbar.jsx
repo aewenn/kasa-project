@@ -4,11 +4,11 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <ul>
-                <NavLink to="/home">
+                <NavLink to="/" className={({isActive}) => (isActive ? "link-underline" : "")}>
                 <li>Accueil</li>
                 </NavLink>
-                <NavLink to="/aboutkasa">
-                <li>A propos</li>
+                <NavLink to="/about" className={({isActive}) => (isActive ? "link-underline" : "")}>
+                <li>A Propos</li>
                 </NavLink>
             </ul>
         </div>
