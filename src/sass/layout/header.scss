@@ -2,13 +2,18 @@
 
 header {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
     @media screen and (max-width: 768px) {
         margin-top:20px;
         margin-right:20px;
         margin-left:20px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width:768px) {
+        margin-top: 35px;
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+    @media screen and (min-width: 1020px) {
         margin-top:45px;
         margin-right:100px;
         margin-left:100px;
@@ -19,7 +24,11 @@ header {
             width: 145px;
             height:46px;
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width:768px) {
+            width: 180px;
+            height: 53px;
+        }
+        @media screen and (min-width: 1020px) {
             width: 210px;
             height: 68px;
         }

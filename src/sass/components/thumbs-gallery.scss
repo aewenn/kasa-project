@@ -3,4 +3,21 @@
     flex-direction: column;
     margin-top: 22px;
     align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    @media screen and (min-width: 768px) {
+        background-color: #f6f6f6;
+        padding: 50px;
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+
+    @media screen and (min-width: 1020px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:35px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
 }
