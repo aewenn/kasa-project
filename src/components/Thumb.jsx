@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
+import {Link} from "react-router-dom";
 
 const Thumb = ({DataThumb}) => {
     return (
-        DataThumb.map((card) => (
-        <div className="Thumb" key={card.id}>
-            <img src={card.cover} alt={card.title} />
-            <h2>{card.title}</h2>
-        </div>
+        DataThumb.map((location) => (
+        <Link to={`/location/${location.id}`} className="Thumb" key={location.id}>
+            <img src={location.cover} alt={location.title} />
+            <h2>{location.title}</h2>
+        </Link>
         ))
     );
 
