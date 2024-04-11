@@ -1,5 +1,10 @@
-<svg width="48" height="80" viewBox="0 0 48 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Vector">
-<path id="Vector_2" d="M47.04 7.78312L39.92 0.703125L0.359985 40.3031L39.96 79.9031L47.04 72.8231L14.52 40.3031L47.04 7.78312Z" fill="white"/>
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow_forward_ios-24px 1" clip-path="url(#clip0_289129_254)">
+<path id="Vector" d="M6.48999 21.0106L8.25999 22.7806L18.16 12.8806L8.25999 2.98059L6.48999 4.75059L14.62 12.8806L6.48999 21.0106Z" fill="white"/>
 </g>
+<defs>
+<clipPath id="clip0_289129_254">
+<rect width="24" height="24" fill="white" transform="translate(0 0.880615)"/>
+</clipPath>
+</defs>
 </svg>

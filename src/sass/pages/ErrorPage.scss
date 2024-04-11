@@ -5,27 +5,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h3 {
-        color:#FF6060;
+        color: #FF6060;
         font-size: 96px;
         margin-bottom: 50px;
+
         @media screen and (min-width:768px) {
             margin-top: 50px;
             font-size: 200px;
         }
     }
+
     p {
         color: #FF6060;
         font-size: 18px;
         text-align: center;
         margin-bottom: 50px;
+
         @media screen and (min-width:768px) {
             font-size: 30px;
         }
     }
+
     .link {
         color: black;
         font-size: 14px;
+
         @media screen and (min-width:768px) {
             font-size: 18px;
         }

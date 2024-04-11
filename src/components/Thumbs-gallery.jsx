@@ -2,11 +2,11 @@ import Thumb from './Thumb';
 import DataThumb from "../data/logements.json";
 
 const Thumbsgallery = () => {
-    return (
-        <section className="Thumbs-gallery">
+  return (
+    <section className="Thumbs-gallery">
       <Thumb DataThumb={DataThumb} />
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Thumbsgallery;

@@ -1,12 +1,13 @@
 /* About Kasa */
 
-import Bannerabout from "../components/Banner-about";
+import Banner from "../components/Banner";
+import BannerImg from "../assets/banner-aboutkasa.png"
 import Collapsis from "../components/Collapsis";
 
 const AboutKasa = () => {
     return (
         <div>
-            <Bannerabout />
+            <Banner imageSrc={BannerImg} alt="Photographie de vallée" imageClass="img-about" />
             <Collapsis />
         </div>
     );

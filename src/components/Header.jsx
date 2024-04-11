@@ -3,10 +3,10 @@ import Navbar from './Navbar';
 
 const Header = () => {
     return (
-    <header>
-        <img src={kasalogo} alt="logo" />
-        <Navbar />
-    </header>
+        <header>
+            <img src={kasalogo} alt="logo" />
+            <Navbar />
+        </header>
     );
 };
 

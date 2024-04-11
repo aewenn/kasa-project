@@ -1,4 +1,4 @@
-import{useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import locations from "../data/logements.json"; // importation du fichier logements.json
 import Slideshow from "../components/Slideshow";
 
@@ -10,15 +10,15 @@ const findLocations = (id) => {
 
 const Location = () => {
 
-    const{id} = useParams(); // Récupération de l'id du logement
+    const { id } = useParams(); // Récupération de l'id du logement
     const location = findLocations(id); // Pour gérer l'affichage des données du logement
 
     return (
         <section className="location-section">
-                 <div className="pictures">
-                    <Slideshow />
+            <Slideshow />
+            <div className="location-info">
                 <h1>{location.title}</h1>
-            <p>{location.location}</p>
+                <p>{location.location}</p>
             </div>
         </section>
     );

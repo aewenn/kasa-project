@@ -1,14 +1,14 @@
 /* Page d'accueil */
 
-import Banner from "../components/Banner-home";
+import Banner from "../components/Banner";
+import BannerImg from "../assets/banner.png";
 import Thumbsgallery from "../components/Thumbs-gallery";
 
 const Home = () => {
   return (
     <div>
-      <Banner />
+      <Banner imageSrc={BannerImg} alt="Photographie de falaises" title="Chez vous, partout et ailleurs" imageClass="img-home"/>
       <Thumbsgallery />
-
     </div>
   );
 };
