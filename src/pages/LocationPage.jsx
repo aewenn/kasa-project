@@ -1,4 +1,4 @@
-/* Location Page */
+/* Page hébergement */
 
 import Location from "../components/Location";
 

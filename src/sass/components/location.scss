@@ -1,16 +1,56 @@
 .location-section {
-    width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 27px;
     position: relative;
+    margin-right: 20px;
+    margin-left: 20px;
+
+    @media screen and (min-width:768px) {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    @media screen and (min-width: 1020px) {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .location-tags {
+        display: flex;
+        gap: 10px;
+
+        .tag {
+            border-radius: 5px;
+            background-color: #ff6060;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 10px 3px 10px;
+        }
+    }
 }
 
 .location-info {
-    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
 
     h1 {
         color: #ff6060;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: black;
+        font-size: 14px;
+        padding-top: 0;
+        margin-top: 0;
+        font-weight: 500;
     }
 }
 
@@ -19,29 +59,62 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     img {
-        width: 335px;
+        width: 100%;
         height: 250px;
         object-fit: cover;
         border-radius: 10px;
-        position: absolute;
+        position: relative;
+
+        @media screen and (min-width:768px) {
+            height: 450px;
+        }
     }
 
     .arrowleft {
         width: 24px;
         height: 24px;
         position: absolute;
-        top: 110px;
-        right: 20px;
+        top: 108px;
+        right: 0px;
+        cursor: pointer;
+
+        @media screen and (min-width:768px) {
+            top: 205px;
+            height: 46px;
+            width: 46px;
+        }
+
+        @media screen and (min-width:1020px) {
+            top: 190px;
+            height: 79px;
+            width: 79px;
+            right: 0px;
+            ;
+        }
     }
 
     .arrowright {
         width: 24px;
         height: 24px;
         position: absolute;
-        top: 110px;
-        left: 20px;
+        top: 108px;
+        left: 0px;
+        cursor: pointer;
+
+        @media screen and (min-width:768px) {
+            top: 205px;
+            height: 46px;
+            width: 46px;
+        }
+
+        @media screen and (min-width:1020px) {
+            top: 190px;
+            height: 79px;
+            width: 79px;
+        }
     }
 }

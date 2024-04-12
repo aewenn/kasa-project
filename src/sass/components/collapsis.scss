@@ -1,7 +1,5 @@
 .Collapsis-section {
     position: relative;
-    display: flex;
-    flex-direction: column;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -15,6 +13,11 @@
     @media screen and (min-width: 1020px) {
         margin-left: 15%;
         margin-right: 15%;
+    }
+
+    .collapsis-about {
+        display: flex;
+        flex-direction: column;
     }
 
     .Collapsis {
