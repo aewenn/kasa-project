@@ -1,8 +1,7 @@
-.Collapsis-section {
-    position: relative;
-    margin-top: 20px;
+.collapsis-about {
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 20px;
 
     @media screen and (min-width:768px) {
         margin-top: 38px;
@@ -14,11 +13,26 @@
         margin-left: 15%;
         margin-right: 15%;
     }
+}
 
-    .collapsis-about {
-        display: flex;
-        flex-direction: column;
+.collapsis-location {
+    display: flex;
+
+    .Collapsis-section {
+        flex-wrap: nowrap;
+        gap: 10%;
     }
+
+    .Collapsis {
+        width: 50%;
+    }
+}
+
+.Collapsis-section {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
     .Collapsis {
         position: relative;
@@ -60,6 +74,9 @@
         transform: rotate(-180deg);
     }
 
+    .Collapsis-header {
+        cursor: pointer;
+    }
 
     .Collapsis-content {
         z-index: 2;
@@ -112,6 +129,7 @@
 
         @media screen and (min-width:768px) {
             font-size: 16px;
+            padding-left: 15px;
         }
 
         &.slide-up-text {

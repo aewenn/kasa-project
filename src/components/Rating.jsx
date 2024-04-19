@@ -1,17 +1,20 @@
 const Rating = ({ rating }) => {
-    console.log(rating);
+    // On convertit la notation du logement en nombre d'étoiles pleines et vides
+    const filledStars = parseInt(rating);
+    const emptyStars = 5 - filledStars;
+
     return (
-        <div>
-            {Array.from(Array(parseInt(rating))).map((_, index) => (
-                <span key={index}>test</span>
+        <div className="rating-container">
+            {/* On génère les étoiles pleines avec la classe "rating" */}
+            {Array(filledStars).fill().map((_, index) => (
+                <i className="fa-solid fa-star rating" key={`filled-${index}`}></i>
             ))}
-            {Array.from(Array(5 - parseInt(rating))).map((_, index) => (
-                <span key={index + parseInt(rating)}>4</span>
+            {/* On génère les étoiles vides avec la classe "score" */}
+            {Array(emptyStars).fill().map((_, index) => (
+                <i className="fa-solid fa-star score" key={`empty-${index}`}></i>
             ))}
         </div>
     );
 };
 
 export default Rating;
-
-

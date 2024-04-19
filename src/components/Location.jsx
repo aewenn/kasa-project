@@ -32,10 +32,12 @@ const Location = () => {
                 <h1>{location.title}</h1> {/* Titre du logement */}
                 <p>{location.location}</p> {/* Emplacement du logement */}
             </div>
-            <Rating rating={location.rating} />
             <Tags tags={location.tags} />
+            <Rating rating={location.rating} />
+            <div className="collapsis-location">
                 {/* Utilisation du composant Collapsis pour afficher la description et les équipements du logement */}
                 <Collapsis data={collapsisData} />
+            </div>
         </section>
     );
 };
