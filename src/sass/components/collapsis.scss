@@ -48,7 +48,6 @@
             cursor: pointer;
             transition: transform 0.4s ease;
 
-
             @media screen and (min-width:768px) {
                 width: 32px;
                 top: 20px;
@@ -61,18 +60,89 @@
         transform: rotate(-180deg);
     }
 
+
     .Collapsis-content {
         z-index: 2;
         width: 100%;
         background-color: #f6f6f6;
+        position: relative;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        max-height: 0;
 
-        p {
-            font-size: 13px;
-            padding-left: 5px;
-            padding-right: 5px;
+        &.slide-up {
+            animation: slide-up 0.5s ease-in-out both;
+        }
 
-            @media screen and (min-width:768px) {
-                font-size: 16px;
+        &.slide-down {
+            animation: slide-down 0.5s ease-in-out both;
+            max-height: 200px;
+        }
+    }
+
+
+    @keyframes slide-up {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-down {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    p {
+        font-size: 13px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        @media screen and (min-width:768px) {
+            font-size: 16px;
+        }
+
+        &.slide-up-text {
+            animation: slide-up-text 0.5s ease-in-out both;
+        }
+
+        &.slide-down-text {
+            animation: slide-down-text 0.5s ease-in-out both;
+
+            @keyframes slide-down-text {
+                0% {
+                    transform: translateY(-40px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes slide-up-text {
+                0% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(-40px);
+                    opacity: 0;
+                }
             }
         }
     }

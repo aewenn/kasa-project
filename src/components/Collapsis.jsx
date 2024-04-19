@@ -1,23 +1,36 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import arrow from "../assets/arrow.svg";
+import PropTypes from "prop-types"; 
+import arrow from "../assets/arrow.svg"; 
+
 
 const Collapsis = ({ data }) => {
-    const [collapsedIndex, setCollapsedIndex] = useState(null); // Utilisation du hook useState pour gérer l'état de l'index actuellement collapsé
+    const [isOpen, setIsOpen] = useState(Array(data.length).fill(false)); // Utilisation du hook useState pour gérer l'état d'ouverture de chaque élément
+
+    // Fonction pour basculer l'état d'ouverture d'un élément
+    const toggleOpen = (index) => {
+        setIsOpen(prevState => {
+            const newState = [...prevState];
+            newState[index] = !newState[index];
+            return newState;
+        });
+    };
 
     const collapsisItems = []; // Tableau pour stocker les éléments du Collapsis
 
     // Boucle pour parcourir les données et créer les éléments correspondants
     for (let i = 0; i < data.length; i++) {
         const item = data[i]; // On récupère l'élément actuel dans les données
-        const isCollapsed = i === collapsedIndex; // On détermine si l'élément est actuellement collapsé ou non
 
         // Création de chaque élément Collapsis avec les données correspondantes
         collapsisItems.push(
-            <div key={item.id} className="Collapsis" onClick={() => setCollapsedIndex(isCollapsed ? null : i)}>
-                <img src={arrow} alt="flèche menu déroulant" className={`arrow ${isCollapsed ? 'collapsed' : ''}`} />
-                <h3>{item.title}</h3>
-                {isCollapsed && <div className="Collapsis-content"><p>{item.text}</p></div>}
+            <div key={item.id} className="Collapsis">
+                <div className="Collapsis-header" onClick={() => toggleOpen(i)}>
+                    <img src={arrow} alt="flèche menu déroulant" className={`arrow ${isOpen[i] ? 'collapsed' : ''}`} />
+                    <h3>{item.title}</h3>
+                </div>
+                <div className={`Collapsis-content ${isOpen[i] ? 'slide-down' : 'slide-up'}`}>
+                    <p className={`${isOpen[i] ? 'slide-down-text' : 'slide-up-text'}`}>{item.text}</p>
+                </div>
             </div>
         );
     }
@@ -29,7 +42,7 @@ const Collapsis = ({ data }) => {
     );
 };
 
-Collapsis.propTypes = { 
+Collapsis.propTypes = {
     data: PropTypes.arrayOf( // Les données doivent être un tableau d'objets avec des propriétés spécifiques
         PropTypes.shape({
             id: PropTypes.number.isRequired, // L'ID doit être un nombre et est requis
@@ -42,4 +55,5 @@ Collapsis.propTypes = {
     ).isRequired
 };
 
-export default Collapsis;
+export default Collapsis; 
+
