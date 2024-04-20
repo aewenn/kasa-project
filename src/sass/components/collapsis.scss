@@ -19,12 +19,19 @@
     display: flex;
 
     .Collapsis-section {
-        flex-wrap: nowrap;
-        gap: 10%;
+        display: block;
     }
 
-    .Collapsis {
-        width: 50%;
+    @media screen and (min-width:768px) {
+        .Collapsis-section {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10%;
+        }
+
+        .Collapsis {
+            width: 50%;
+        }
     }
 }
 
@@ -93,7 +100,7 @@
 
         &.slide-down {
             animation: slide-down 0.5s ease-in-out both;
-            max-height: 200px;
+            max-height: 500px;
         }
     }
 

@@ -16,25 +16,97 @@
         margin-right: 100px;
     }
 
-    .rating-container {
-        padding-top: 20px;
-        padding-bottom: 20px;
+    .rating-host {
         display: flex;
-        gap: 5px;
-        font-size: 14px;
+        width: 100%;
+        position: relative;
 
-        .score {
-            color: #e3e3e3;
+        @media screen and (min-width:768px) {
+            justify-content: flex-end;
         }
 
-        .rating {
-            color: #ff6060;
+        .Host {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 50%;
+
+            @media screen and (min-width:768px) {
+                position: absolute;
+                bottom: 73px;
+                right: 0;
+            }
+
+            @media screen and (min-width:768px) {
+                position: absolute;
+                bottom: 70px;
+                right: 0;
+            }
+
+            .host-name {
+                color: #ff6060;
+                font-size: 12px;
+                font-weight: 500;
+                padding-right: 5px;
+                width: 93px;
+                text-align: right;
+
+                @media screen and (min-width:768px) {
+                    font-size: 16px;
+                }
+
+                @media screen and (min-width:1020px) {
+                    font-size: 18px;
+                }
+            }
+
+            .host-picture {
+                width: 35px;
+                border-radius: 20px;
+
+                @media screen and (min-width:768px) {
+                    width: 53px;
+                    border-radius: 40px;
+                }
+
+                @media screen and (min-width:1020px) {
+                    width: 64px;
+                }
+            }
+        }
+
+        .rating-container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            gap: 5px;
+            font-size: 14px;
+            width: 50%;
+
+            @media screen and (min-width:768px) {
+                font-size: 20px;
+                position: absolute;
+                bottom: 5px;
+                width: auto;
+            }
+
+            .score {
+                color: #e3e3e3;
+            }
+
+            .rating {
+                color: #ff6060;
+            }
         }
     }
 
     .location-tags {
         display: flex;
         gap: 10px;
+
+        @media screen and (min-width:768px) {
+            padding-bottom: 24px;
+        }
 
         .tag {
             border-radius: 5px;
@@ -55,6 +127,7 @@
     }
 }
 
+
 .location-info {
     display: flex;
     flex-direction: column;
@@ -64,6 +137,15 @@
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 10px;
+        margin-right: 50px;
+
+        @media screen and (min-width:768px) {
+            font-size: 26px;
+        }
+
+        @media screen and (min-width:1100px) {
+            font-size: 36px;
+        }
     }
 
     p {
@@ -72,6 +154,14 @@
         padding-top: 0;
         margin-top: 0;
         font-weight: 500;
+
+        @media screen and (min-width:768px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width:1020px) {
+            font-size: 18px;
+        }
     }
 }
 

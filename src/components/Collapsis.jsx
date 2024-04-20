@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types"; 
-import arrow from "../assets/arrow.svg"; 
-
+import PropTypes from "prop-types";
+import arrow from "../assets/arrow.svg";
 
 const Collapsis = ({ data }) => {
     const [isOpen, setIsOpen] = useState(Array(data.length).fill(false)); // Utilisation du hook useState pour gérer l'état d'ouverture de chaque élément
@@ -29,7 +28,15 @@ const Collapsis = ({ data }) => {
                     <h3>{item.title}</h3>
                 </div>
                 <div className={`Collapsis-content ${isOpen[i] ? 'slide-down' : 'slide-up'}`}>
-                    <p className={`${isOpen[i] ? 'slide-down-text' : 'slide-up-text'}`}>{item.text}</p>
+                    {Array.isArray(item.text) ? (
+                        // Si item.text est un tableau, on map chaque paragraphe pour l'afficher
+                        item.text.map((paragraph, index) => (
+                            <p key={index} className={isOpen[i] ? 'slide-down-text' : 'slide-up-text'}>{paragraph}</p>
+                        ))
+                    ) : (
+                        // Sinon, on affiche le texte directement
+                        <p className={isOpen[i] ? 'slide-down-text' : 'slide-up-text'}>{item.text}</p>
+                    )}
                 </div>
             </div>
         );
@@ -55,5 +62,4 @@ Collapsis.propTypes = {
     ).isRequired
 };
 
-export default Collapsis; 
-
+export default Collapsis;

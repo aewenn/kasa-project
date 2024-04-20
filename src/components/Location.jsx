@@ -5,37 +5,37 @@ import Slideshow from "../components/Slideshow";
 import Collapsis from '../components/Collapsis';
 import Tags from "./Tags";
 import Rating from "./Rating";
+import Host from "./Host";
 
-
-// Fonction pour trouver un logement spécifique en fonction de l'ID
 const findLocation = (id) => {
     return locations.find((location) => location.id === id);
 }
 
 const Location = () => {
-    const { id } = useParams(); // Récupération de l'ID du logement à partir de l'URL
-    const location = findLocation(id); // Recherche du logement correspondant à l'ID
+    const { id } = useParams();
+    const location = findLocation(id);
     if (!location) {
         return <Navigate to="/error" />
     }
 
-    // Structure des données pour les Collapsis
     const collapsisData = [
-        { id: 1, title: "Description", text: location.description }, // Description avec le texte du logement
-        { id: 2, title: "Équipements", text: location.equipments } // Équipements avec la liste des équipements du logement
+        { id: 1, title: "Description", text: location.description },
+        { id: 2, title: "Équipements", text: location.equipments }
     ];
 
     return (
         <section className="location-section">
-            <Slideshow id={id} /> {/* Affichage du diaporama du logement */}
+            <Slideshow id={id} />
             <div className="location-info">
-                <h1>{location.title}</h1> {/* Titre du logement */}
-                <p>{location.location}</p> {/* Emplacement du logement */}
+                <h1>{location.title}</h1>
+                <p>{location.location}</p>
             </div>
             <Tags tags={location.tags} />
-            <Rating rating={location.rating} />
+            <div className="rating-host">
+                <Rating rating={location.rating} />
+                <Host name={location.host.name} picture={location.host.picture} />
+            </div>
             <div className="collapsis-location">
-                {/* Utilisation du composant Collapsis pour afficher la description et les équipements du logement */}
                 <Collapsis data={collapsisData} />
             </div>
         </section>
