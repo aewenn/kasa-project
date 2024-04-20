@@ -16,9 +16,10 @@
     "sass": "^1.72.0",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://aewenn.github.io/kasa-project/",
   "scripts": {
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+  "deploy": "gh-pages -d build --repo https://github.com/aewenn/kasa-project --branch gh-pages",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

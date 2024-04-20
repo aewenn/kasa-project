@@ -6,11 +6,10 @@ import ErrorPage from "./pages/ErrorPage";
 import LocationPage from "./pages/LocationPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename="/kasa-project">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
