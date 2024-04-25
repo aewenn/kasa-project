@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kasa-project/static/css/main.9f73b044.css",
-    "main.js": "/kasa-project/static/js/main.dd3ab347.js",
+    "main.js": "/kasa-project/static/js/main.345297a5.js",
     "static/js/453.d5128a2f.chunk.js": "/kasa-project/static/js/453.d5128a2f.chunk.js",
     "static/media/banner-aboutkasa.png": "/kasa-project/static/media/banner-aboutkasa.dc7a08e1faa2e14de0bd.png",
     "static/media/banner.png": "/kasa-project/static/media/banner.1168be13650bb18b456e.png",
@@ -12,11 +12,11 @@
     "static/media/arrow-left.svg": "/kasa-project/static/media/arrow-left.8ccbd0760da3ee791ab46caf9d6c8b93.svg",
     "static/media/arrow-right.svg": "/kasa-project/static/media/arrow-right.183dc3fe52c513cfa5d1ce1194ec39ac.svg",
     "main.9f73b044.css.map": "/kasa-project/static/css/main.9f73b044.css.map",
-    "main.dd3ab347.js.map": "/kasa-project/static/js/main.dd3ab347.js.map",
+    "main.345297a5.js.map": "/kasa-project/static/js/main.345297a5.js.map",
     "453.d5128a2f.chunk.js.map": "/kasa-project/static/js/453.d5128a2f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f73b044.css",
-    "static/js/main.dd3ab347.js"
+    "static/js/main.345297a5.js"
   ]
 }
