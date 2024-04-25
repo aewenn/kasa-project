@@ -1,50 +1,32 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import arrow from "../assets/arrow.svg";
+import PropTypes from "prop-types"; 
+import Collapse from "./Collapse";
+import arrow from "../assets/arrow.svg"; 
 
+// Composant parent Collapsis
 const Collapsis = ({ data }) => {
     const [isOpen, setIsOpen] = useState(Array(data.length).fill(false)); // Utilisation du hook useState pour gérer l'état d'ouverture de chaque élément
 
     // Fonction pour basculer l'état d'ouverture d'un élément
     const toggleOpen = (index) => {
         setIsOpen(prevState => {
-            const newState = [...prevState];
-            newState[index] = !newState[index];
-            return newState;
+            const newState = [...prevState]; // Création d'une nouvelle copie de l'état actuel
+            newState[index] = !newState[index]; // Inversion de l'état d'ouverture de l'élément spécifié
+            return newState; // Retourne le nouvel état mis à jour
         });
     };
 
-    const collapsisItems = []; // Tableau pour stocker les éléments du Collapsis
-
-    // Boucle pour parcourir les données et créer les éléments correspondants
-    for (let i = 0; i < data.length; i++) {
-        const item = data[i]; // On récupère l'élément actuel dans les données
-
-        // Création de chaque élément Collapsis avec les données correspondantes
-        collapsisItems.push(
-            <div key={item.id} className="Collapsis">
-                <div className="Collapsis-header" onClick={() => toggleOpen(i)}>
-                    <img src={arrow} alt="flèche menu déroulant" className={`arrow ${isOpen[i] ? 'collapsed' : ''}`} />
-                    <h3>{item.title}</h3>
-                </div>
-                <div className={`Collapsis-content ${isOpen[i] ? 'slide-down' : 'slide-up'}`}>
-                    {Array.isArray(item.text) ? (
-                        // Si item.text est un tableau, on map chaque paragraphe pour l'afficher
-                        item.text.map((paragraph, index) => (
-                            <p key={index} className={isOpen[i] ? 'slide-down-text' : 'slide-up-text'}>{paragraph}</p>
-                        ))
-                    ) : (
-                        // Sinon, on affiche le texte directement
-                        <p className={isOpen[i] ? 'slide-down-text' : 'slide-up-text'}>{item.text}</p>
-                    )}
-                </div>
-            </div>
-        );
-    }
-
     return (
         <div className="Collapsis-section">
-            {collapsisItems}
+            {data.map((item, i) => (
+                <div key={item.id} className="Collapsis">
+                    <div className="Collapsis-header" onClick={() => toggleOpen(i)}>
+                        <img src={arrow} alt="flèche menu déroulant" className={`arrow ${isOpen[i] ? 'collapsed' : ''}`} /> 
+                        <h3>{item.title}</h3> 
+                    </div>
+                    <Collapse isOpen={isOpen[i]}>{item.text}</Collapse> 
+                </div>
+            ))}
         </div>
     );
 };
@@ -62,4 +44,4 @@ Collapsis.propTypes = {
     ).isRequired
 };
 
-export default Collapsis;
+export default Collapsis; 
