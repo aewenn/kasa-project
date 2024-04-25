@@ -1,6 +1,9 @@
+/* Thumbs-gallery */
+
 .Thumbs-gallery {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 22px;
     align-items: center;
     margin-right: 20px;
@@ -20,5 +23,9 @@
         gap: 35px;
         margin-right: 100px;
         margin-left: 100px;
+    }
+
+    @media screen and (min-width: 1180px) {
+        gap: 43px;
     }
 }

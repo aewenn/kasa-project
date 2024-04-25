@@ -1,3 +1,5 @@
+/* Location */
+
 .location-section {
     display: flex;
     flex-direction: column;
@@ -103,6 +105,7 @@
     .location-tags {
         display: flex;
         gap: 10px;
+        flex-wrap: wrap;
 
         @media screen and (min-width:768px) {
             padding-bottom: 24px;
@@ -141,10 +144,12 @@
 
         @media screen and (min-width:768px) {
             font-size: 26px;
+            width: 75%;
         }
 
-        @media screen and (min-width:1100px) {
+        @media screen and (min-width:1180px) {
             font-size: 36px;
+            width: 88%;
         }
     }
 
