@@ -47,8 +47,11 @@ function Slideshow({ id }) {
             <img src={location && location.pictures[currentImageIndex]} alt={location && location.title} /> {/* On affiche l'image actuelle */}
             {hasMultipleImages && (
                 <>  {/* On utilise la variable hasMultipleImages pour conditionner l'affichage des flèches */}
-                    <img className="arrowleft" src={arrowleft} alt="Flèche gauche" onClick={goToPreviousImage} />
-                    <img className="arrowright" src={arrowright} alt="Flèche droite" onClick={goToNextImage} />
+                    <img className="arrowleft" src={arrowleft} alt="Flèche gauche" onClick={goToNextImage} />
+                    <img className="arrowright" src={arrowright} alt="Flèche droite" onClick={goToPreviousImage} />
+                    <div className="slide-info">
+                        {currentImageIndex + 1} / {location.pictures.length}
+                    </div>
                 </>
             )}
         </div>
