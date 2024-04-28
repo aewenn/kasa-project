@@ -1,5 +1,4 @@
 /* Thumb */
-
 .Thumb {
     width: 100%;
     height: 255px;
@@ -7,6 +6,7 @@
     position: relative;
     cursor: pointer;
     border-radius: 10px;
+    overflow: hidden;
 
     @media screen and (min-width: 1020px) {
         width: 30%;
@@ -25,6 +25,16 @@
         border-radius: 10px;
     }
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(10, 10, 10, 0), rgba(4, 4, 4, 0.52), rgba(0, 0, 0, 0.5));
+    }
+
     h2 {
         position: absolute;
         color: #fff;
@@ -33,7 +43,7 @@
         bottom: 10px;
         width: 87%;
         left: 20px;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        z-index: 1;
 
         @media screen and (min-width: 768px) {
             font-size: 18px;
